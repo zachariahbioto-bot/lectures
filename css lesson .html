@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Concepts & CSS Masterclass</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .content-card {
+            @apply bg-white rounded-3xl shadow-lg p-6 sm:p-10 lg:p-12 transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl;
+        }
+        .hacker-green {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+	<header class="sticky top-0 z-50 bg-white/45 backdrop-blur-sm border-b border-gray-200 py-4 px-6 sm:px-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl sm:text-2xl font-bold text-gray-900">Css Lessons</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto p-4 sm:p-8">
+
+        <!-- Table of Contents Navigation -->
+        <nav class="my-8 lg:my-16">
+            <div class="bg-gray-100 rounded-2xl shadow-md p-6 lg:p-10">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Table of Contents</h2>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-700">
+                    <li>
+                        <a href="#css-chapter-1" class="block p-4 bg-white rounded-xl shadow hover:bg-purple-50 transition-colors duration-200">
+                            <span class="font-semibold text-purple-600">Chapter 1:</span> Introduction to CSS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#css-chapter-2" class="block p-4 bg-white rounded-xl shadow hover:bg-purple-50 transition-colors duration-200">
+                            <span class="font-semibold text-purple-600">Chapter 2:</span> Linking Your Styles
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#css-chapter-3" class="block p-4 bg-white rounded-xl shadow hover:bg-purple-50 transition-colors duration-200">
+                            <span class="font-semibold text-purple-600">Chapter 3:</span> The Language of Color
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#css-chapter-4" class="block p-4 bg-white rounded-xl shadow hover:bg-purple-50 transition-colors duration-200">
+                            <span class="font-semibold text-purple-600">Chapter 4:</span> Styling Text
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#css-chapter-5" class="block p-4 bg-white rounded-xl shadow hover:bg-purple-50 transition-colors duration-200">
+                            <span class="font-semibold text-purple-600">Chapter 5:</span> The Box Model
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#css-chapter-6" class="block p-4 bg-white rounded-xl shadow hover:bg-purple-50 transition-colors duration-200">
+                            <span class="font-semibold text-purple-600">Chapter 6:</span> Lists, Tables, and Forms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#css-chapter-7" class="block p-4 bg-white rounded-xl shadow hover:bg-purple-50 transition-colors duration-200">
+                            <span class="font-semibold text-purple-600">Chapter 7:</span> Layout and Positioning
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#css-chapter-17" class="block p-4 bg-white rounded-xl shadow hover:bg-purple-50 transition-colors duration-200">
+                            <span class="font-semibold text-purple-600">Chapter 17:</span> Advanced Styling and CSS3
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#css-chapter-19" class="block p-4 bg-white rounded-xl shadow hover:bg-purple-50 transition-colors duration-200">
+                            <span class="font-semibold text-purple-600">Chapter 19:</span> Advanced Layout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- CSS Lessons Section -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="css-chapter-1" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-purple-500 pb-4 mb-6">
+                    Introduction to CSS
+                </h2>
+                <div class="bg-purple-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        While HTML provides the skeleton of a web page, <strong>CSS</strong> is what gives it life. It's the language that controls the visual presentation, turning raw content into a beautiful and engaging user experience.
+                    </p>
+                </div>
+                <div class="bg-purple-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-purple-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> The CSS Rule
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        A CSS rule is the basic building block of a stylesheet. It tells the browser which HTML elements to style and what styles to apply. Every rule has two parts: a <strong>selector</strong> and a <strong>declaration block</strong>.
+                    </p>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">h1 {
+  color: blue;
+  font-size: 24px;
+}</pre>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-6">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Concepts
+                    </h3>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">Separation of Concerns:</strong> This principle dictates that HTML should handle structure, and CSS should handle presentation. This makes your code cleaner and easier to maintain.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">Cascading:</strong> The "C" in CSS means that styles "cascade" down from parent elements to their children. It also refers to the specific rules for how the browser decides which styles to apply when multiple rules conflict.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="css-chapter-2" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-purple-500 pb-4 mb-6">
+                    Adding CSS to Your Page
+                </h2>
+                <div class="bg-purple-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        There are three primary ways to link CSS to an HTML document. Understanding each method is crucial for writing efficient and organized code.
+                    </p>
+                </div>
+                <div class="space-y-8">
+                    <div class="bg-white rounded-2xl shadow-md p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 flex items-center">
+                            <span class="mr-2 text-xl"></span> External Stylesheet <span class="text-sm font-normal ml-2 text-purple-600">(Recommended)</span>
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            This is the standard and most efficient method. You create a separate <code class="bg-gray-100 px-2 py-1 rounded text-sm">.css</code> file and link it from the <code class="bg-gray-100 px-2 py-1 rounded text-sm">&lt;head&gt;</code> of your HTML document. This allows you to apply the same styles to multiple pages.
+                        </p>
+                        <pre class="text-sm sm:text-base font-mono bg-gray-900 rounded-md p-4 overflow-x-auto hacker-green">&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</pre>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 flex items-center">
+                            <span class="mr-2 text-xl"></span> Internal Stylesheet
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            You embed CSS directly into your HTML using the <code class="bg-gray-100 px-2 py-1 rounded text-sm">&lt;style&gt;</code> tag within the <code class="bg-gray-100 px-2 py-1 rounded text-sm">&lt;head&gt;</code>. This is useful for single-page applications or when a page has unique styles not needed elsewhere.
+                        </p>
+                        <pre class="text-sm sm:text-base font-mono bg-gray-900 rounded-md p-4 overflow-x-auto hacker-green">&lt;head&gt;
+  &lt;style&gt;
+    body {
+      background-color: lightgray;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 flex items-center">
+                            <span class="mr-2 text-xl"></span> Inline Styles
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            You apply styles directly to a specific HTML element using the <code class="bg-gray-100 px-2 py-1 rounded text-sm">style</code> attribute. This method is generally <strong>discouraged</strong> as it mixes content and presentation, making your code difficult to read and manage.
+                        </p>
+                        <pre class="text-sm sm:text-base font-mono bg-gray-900 rounded-md p-4 overflow-x-auto hacker-green">&lt;h1 style="color: red; text-align: center;"&gt;Hello World&lt;/h1&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Section -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="css-chapter-3" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-purple-500 pb-4 mb-6">
+                    The Language of Color
+                </h2>
+                <div class="bg-purple-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Color is a fundamental part of web design, used to style text, backgrounds, and borders, and to create visual hierarchy. 
+                    </p>
+                </div>
+                <div class="bg-purple-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-purple-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Specifying Colors
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        There are several ways to specify a color in CSS, each with its own advantages.
+                    </p>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">Color Names:</strong> The simplest method is using a predefined color name like <code>red</code> or <code>blue</code>.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">Hexadecimal:</strong> The most common method, using a six-digit hex code preceded by a <code>#</code>. For example, <code>#FF0000</code> is red.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">RGB:</strong> Specifies color using red, green, and blue values from 0 to 255. For example, <code>rgb(255, 0, 0)</code> is red.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">HSL:</strong> An intuitive color model using Hue, Saturation, and Lightness values. For example, <code>hsl(0, 100%, 50%)</code> is red.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-6">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Transparency
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        You can also control the transparency of a color using **RGBA** and **HSLA**, which add an "alpha" value from 0 to 1.
+                    </p>
+                    <pre class="text-sm sm:text-base font-mono bg-gray-900 rounded-md p-4 overflow-x-auto hacker-green">p {
+  color: rgba(255, 0, 0, 0.5); /* 50% transparent red */
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Text Section -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="css-chapter-4" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-purple-500 pb-4 mb-6">
+                    Styling Text
+                </h2>
+                <div class="bg-purple-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        While HTML provides the semantic meaning of text, **CSS** controls its visual appearance, including font, size, color, and spacing.
+                    </p>
+                </div>
+                <div class="bg-purple-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-purple-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Font Properties
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        The `font-family` property specifies the typeface. You should always provide a fallback list of fonts. 
+                    </p>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5 mb-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">p {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}</pre>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        You can also control the **size**, **weight**, and **style** of your text.
+                    </p>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">h1 {
+  font-size: 3rem; /* relative unit */
+  font-weight: bold;
+  font-style: italic;
+}</pre>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-6">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Spacing & Alignment
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        These properties help you fine-tune the layout and readability of your text.
+                    </p>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">p {
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box Model Section -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="css-chapter-5" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-purple-500 pb-4 mb-6">
+                    The Box Model
+                </h2>
+                <div class="bg-purple-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        The **CSS Box Model** is a fundamental concept in web design. In CSS, every HTML element is treated as a rectangular box. The Box Model defines how the dimensions and spacing of these boxes are calculated, which is crucial for controlling the layout of a web page.
+                    </p>
+                    <div class="flex justify-center my-6">
+                        
+                    </div>
+                </div>
+                <div class="bg-purple-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-purple-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Components
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Each box is composed of four distinct parts, from the inside out:
+                    </p>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">Content:</strong> The innermost part of the box, containing the actual content like text or images. Its dimensions are determined by the <code>height</code> and <code>width</code> properties.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">Padding:</strong> The transparent space between the content and the border. It's like a cushion that pushes the border away from the content. It can be set for all four sides or individually.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">Border:</strong> A line that surrounds the padding. You can set its width, style, and color.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3"></span>
+                            <p><strong class="text-purple-600">Margin:</strong> The transparent space outside the border, which creates a gap between the box and its neighboring elements.</p>
+                        </li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed my-6">
+                        Here's an example of how you can apply these properties to a box:
+                    </p>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">.my-box {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid white;
+  margin: 10px;
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lists, Tables, and Forms Section -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="css-chapter-6" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-purple-500 pb-4 mb-6">
+                    Lists, Tables, and Forms
+                </h2>
+                <div class="bg-purple-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        This chapter explains how to use CSS to style **lists**, **tables**, and **forms**, giving you control over their visual appearance beyond their default browser styling.
+                    </p>
+                </div>
+                <div class="space-y-8">
+                    <div class="bg-white rounded-2xl shadow-md p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 flex items-center">
+                            <span class="mr-2 text-xl">📋</span> Lists
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            CSS provides several properties to control the appearance of list items.
+                        </p>
+                        <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                            <pre class="text-sm sm:text-base font-mono hacker-green">ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: upper-roman;
+}</pre>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 flex items-center">
+                            <span class="mr-2 text-xl">📊</span> Tables
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            You can add borders and spacing to tables to make them more readable and visually appealing.
+                        </p>
+                        <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                            <pre class="text-sm sm:text-base font-mono hacker-green">table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 8px;
+}</pre>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 flex items-center">
+                            <span class="mr-2 text-xl">📝</span> Forms
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            CSS is essential for styling form elements to match the rest of a website's design.
+                        </p>
+                        <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                            <pre class="text-sm sm:text-base font-mono hacker-green">input[type="text"] {
+  border: 1px solid #aaa;
+  padding: 8px;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #357bd8;
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layout and Positioning Section -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="css-chapter-7" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-purple-500 pb-4 mb-6">
+                    Layout and Positioning
+                </h2>
+                <div class="bg-purple-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        This chapter explains how to use CSS to control the layout of a web page, which is about positioning elements where you want them on the screen. This is one of the most powerful and complex aspects of CSS.
+                    </p>
+                    <div class="flex justify-center my-6">
+                        
+                    </div>
+                </div>
+                <div class="bg-purple-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-purple-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">📐</span> The `display` Property
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        The <code>display</code> property is fundamental to layout. It determines how an element is rendered. Common values include:
+                    </p>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3">✓</span>
+                            <p><strong class="text-purple-600"><code>block</code>:</strong> Elements like paragraphs (<code>&lt;p&gt;</code>) and headings (<code>&lt;h1&gt;</code>) are block-level by default. They start on a new line and take up the full available width.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3">✓</span>
+                            <p><strong class="text-purple-600"><code>inline</code>:</strong> Elements like <code>&lt;a&gt;</code> and <code>&lt;span&gt;</code> are inline by default. They do not start on a new line and only take up as much width as they need.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3">✓</span>
+                            <p><strong class="text-purple-600"><code>inline-block</code>:</strong> This is a hybrid that allows an element to sit on the same line as other elements but also allows you to set its width and height.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3">✓</span>
+                            <p><strong class="text-purple-600"><code>none</code>:</strong> This value hides an element completely.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">📌</span> The `position` Property
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        This property controls how an element is positioned on the page. Key values include:
+                    </p>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3">✓</span>
+                            <p><strong class="text-purple-600"><code>static</code>:</strong> The default position. The element flows normally in the document.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3">✓</span>
+                            <p><strong class="text-purple-600"><code>relative</code>:</strong> The element is positioned relative to its normal position. You can use properties like <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> to shift it.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3">✓</span>
+                            <p><strong class="text-purple-600"><code>absolute</code>:</strong> The element is positioned relative to its nearest positioned ancestor. This removes it from the normal document flow.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-purple-500 mr-3">✓</span>
+                            <p><strong class="text-purple-600"><code>fixed</code>:</strong> The element is positioned relative to the browser window and stays in the same place even when the page is scrolled. This is often used for things like navigation bars.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 flex items-center">
+                        <span class="mr-2 text-xl">⚓</span> Floats (`float`)
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        The <code>float</code> property was a common technique for creating multi-column layouts and wrapping text around images. However, more modern and flexible techniques like Flexbox and Grid have largely replaced it.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Styling and CSS3 Section -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="css-chapter-17" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-purple-500 pb-4 mb-6">
+                    Advanced Styling and CSS3
+                </h2>
+                <div class="bg-purple-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        This chapter builds on the foundation of the Box Model and basic styling to introduce more modern and visually appealing CSS properties. These properties allow for more complex and dynamic designs without relying on images or JavaScript.
+                    </p>
+                </div>
+                <div class="bg-purple-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-purple-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🎨</span> Transparency & Gradients
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        The <code>opacity</code> property controls the transparency of an element, with a value from 0 (fully transparent) to 1 (fully opaque). CSS gradients allow for smooth transitions between two or more colors. You can create linear gradients (top to bottom, left to right, etc.) or radial gradients (from a central point outwards).
+                    </p>
+                    <div class="flex justify-center my-6">
+                        
+                    </div>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">.transparent-box {
+  opacity: 0.5; /* 50% transparent */
+}
+
+.gradient-background {
+  background: linear-gradient(to right, #4a90e2, #9b59b6);
+}</pre>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🔲</span> Shadows & Borders
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Shadows give elements a sense of depth, while modern border properties like `border-radius` create softer, more modern designs.
+                    </p>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">.card {
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.headline {
+  text-shadow: 2px 2px 4px #aaa;
+}</pre>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 flex items-center">
+                        <span class="mr-2 text-xl">🔄</span> Transitions
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        The <code>transition</code> property allows you to create smooth, animated changes to an element's properties over a set duration. This makes for a more fluid and engaging user experience.
+                    </p>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">.button {
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #357bd8;
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Layout Section -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="css-chapter-19" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-purple-500 pb-4 mb-6">
+                    Advanced Layout
+                </h2>
+                <div class="bg-purple-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        This chapter builds on the basic positioning concepts to introduce more modern and powerful methods for creating complex web page layouts. These techniques have largely replaced older methods like using floats for multi-column layouts.
+                    </p>
+                    <div class="flex justify-center my-6">
+                        
+                    </div>
+                </div>
+                <div class="bg-purple-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-purple-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">⚓</span> Floats (Review and Clearing)
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        The chapter might begin by reviewing the use of `float` for basic layouts, but it would also cover the problem of "clearing" floats. When an element is floated, it is taken out of the normal document flow, which can cause layout issues with subsequent elements. The `clear` property is used to prevent an element from appearing next to a floated element.
+                    </p>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">📦</span> Flexbox (Flexible Box Layout)
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Flexbox is a one-dimensional layout system that's designed for arranging items in a single row or column. It provides a simple and efficient way to distribute space among items and align them. Flexbox is perfect for creating things like navigation menus and card layouts.
+                    </p>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-item {
+  flex-grow: 1;
+}</pre>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 flex items-center">
+                        <span class="mr-2 text-xl">🗺️</span> Grid (CSS Grid Layout)
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Grid is a two-dimensional layout system that's designed for arranging items in both rows and columns. It is ideal for creating entire page layouts. Grid allows you to define a grid of columns and rows and then place elements into specific cells.
+                    </p>
+                    <div class="bg-gray-900 rounded-xl shadow-md p-5">
+                        <pre class="text-sm sm:text-base font-mono hacker-green">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+.grid-item {
+  grid-column: 2 / 3;
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+                   

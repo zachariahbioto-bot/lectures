@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Concepts Lesson</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .content-card {
+            @apply bg-white rounded-3xl shadow-lg p-6 sm:p-10 lg:p-12 transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Fixed Header -->
+    <header class="sticky top-0 z-50 bg-white/45 backdrop-blur-sm border-b border-gray-200 py-4 px-6 sm:px-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl sm:text-2xl font-bold text-gray-900">Web Concepts Lesson</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto p-4 sm:p-8">
+
+        <!-- Table of Contents Navigation -->
+        <nav class="my-8 lg:my-16">
+            <div class="bg-gray-100 rounded-2xl shadow-md p-6 lg:p-10">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Table of Contents</h2>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-700">
+                    <li>
+                        <a href="#chapter-1" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 1:</span> The Web: Browsers, Servers, and HTTP
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter-2" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 2:</span> HTML Structure
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter-3" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 3:</span> HTML Lists
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter-4" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 4:</span> Links
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter-5" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 5:</span> Images
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter-6" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 6:</span> Tables
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter-7" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 7:</span> Forms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter-8" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 8:</span> Extra Markup
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter-9" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 9:</span> Flash, Video & Audio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter-10" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Chapter 10:</span> HTML5 Structure
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Slide 1: Browsers, Servers, and HTTP -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-1" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    The Web: Browsers, Servers, and HTTP
+                </h2>
+                <div class="bg-blue-50 rounded-2xl mb-5 p-5">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        The web operates on the client-server model. A client, typically a web browser like Chrome or Firefox, makes a request, and a server responds with the requested information. This communication is governed by the Hyper Text Transfer Protocol (HTTP).
+                    </p>
+                </div>
+        
+                <!-- Web Browsers Section -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Web Browsers <span class="text-xl font-normal ml-2 text-blue-600">(The Client)</span>
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        A web browser is a software application that allows you to access and view websites. It's the client in the client-server relationship. When you type a URL (Uniform Resource Locator) into your browser's address bar, you're initiating a request. The browser's job is to:
+                    </p>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <p>Request a webpage from a server.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <p>Receive the data from the server, which is typically in the form of HTML, CSS, and JavaScript files.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <p>Interpret and render this data to display the webpage on your screen.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Technology Summary Section -->
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    <span class="font-semibold text-gray-800">HTML</span> provides the structure, <span class="font-semibold text-gray-800">CSS</span> adds the styling, and <span class="font-semibold text-gray-800">JavaScript</span> handles the interactivity.
+                </p>
+            </div>
+        </section>
+
+        <!-- Slide 2: HTML Structure -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-2" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    HTML Structure
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Based on the book "HTML and CSS: Design and Build Websites" by Jon Duckett, HTML describes the structure of a web page using markup. Just as a newspaper or a form has a structured layout, HTML provides a way to structure content on a webpage.
+                </p>
+        
+                <!-- Key Concepts -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Concepts
+                    </h3>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">HTML Pages are Documents</p>
+                                <p>HTML pages are essentially text documents. HTML provides a way to structure content on a webpage.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Tags and Elements</p>
+                                <p>HTML uses tags, or elements, to give content special meaning. For example, the &lt;p&gt; tag is for a paragraph, and &lt;h1&gt; is for a main heading. Tags usually come in pairs, an opening tag and a closing tag.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Hierarchical Layout</p>
+                                <p>The use of headings and subheadings reflects a hierarchy of information, similar to how a word processor organizes content.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The &lt;head&gt; and &lt;body&gt;</p>
+                                <p>The entire visible content of a webpage is contained within the &lt;body&gt; element. Before the &lt;body&gt;, there is a &lt;head&gt; element that holds information about the page, like its title, which appears in the browser tab.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: HTML Lists -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-3" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    HTML Lists
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    HTML provides three types of lists to help you organize information on a web page, each with a specific purpose.
+                </p>
+        
+                <!-- Unordered Lists -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-6">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Unordered Lists (`&lt;ul&gt;`)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        These are used for lists where the order of items is not important. By default, browsers display list items with a bullet point.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code class="text-sm">&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </div>
+        
+                <!-- Ordered Lists -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-6">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Ordered Lists (`&lt;ol&gt;`)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        These are for lists where the sequence of items matters, such as a set of instructions or a countdown. The browser will automatically number each list item.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code class="text-sm">&lt;ol&gt;
+  &lt;li&gt;First step&lt;/li&gt;
+  &lt;li&gt;Second step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                </div>
+        
+                <!-- Definition Lists -->
+                <div class="bg-blue-50 rounded-2xl p-6">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Definition Lists (`&lt;dl&gt;`)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        This type of list is used to present a list of terms and their corresponding definitions. It consists of definition term (`&lt;dt&gt;`) and definition description (`&lt;dd&gt;`) elements.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code class="text-sm">&lt;dl&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+  &lt;dd&gt;Definition of the term&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+
+                <!-- Example -->
+                <div class="bg-gray-100 p-6 rounded-lg my-8">
+                    <h4 class="text-lg font-bold mb-2">Example:</h4>
+                    <p class="text-gray-700 mb-4">
+                        Here is a simple code example showing an unordered list for groceries and an ordered list for a recipe.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Unordered List Example --&gt;
+&lt;h3&gt;Shopping List&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;Bread&lt;/li&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List Example --&gt;
+&lt;h3&gt;How to Make Toast&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Put bread in the toaster.&lt;/li&gt;
+  &lt;li&gt;Press the lever.&lt;/li&gt;
+  &lt;li&gt;Wait for it to pop.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                </div>
+
+                <!-- Practice Problem for Lists -->
+                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-2xl"></span> Practice Problem
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Your task is to create two simple lists.
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        First, create an **unordered** list of your three favorite fruits. Then, create an **ordered** list for the first three steps of making a cup of coffee.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Links -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-4" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    Chapter 4: Links
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    This chapter would likely cover how to create links between web pages using HTML. Links, or hyperlinks, are the fundamental building blocks of the web, allowing users to navigate from one page to another.
+                </p>
+
+                <!-- Key Concepts -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Concepts
+                    </h3>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `&lt;a&gt;` Tag</p>
+                                <p>The primary element for creating a link is the `&lt;a&gt;` (anchor) tag. The content within this tag becomes the clickable text or image.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `href` Attribute</p>
+                                <p>This is the most important attribute of the `&lt;a&gt;` tag. The `href` (Hypertext Reference) attribute specifies the destination URL or file path that the link will point to.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Absolute vs. Relative URLs</p>
+                                <ul class="list-disc list-inside space-y-2 mt-2">
+                                    <li><span class="font-medium">Absolute URLs:</span> These are full web addresses, including the protocol and domain name, such as `https://www.example.com/page.html`. You use them to link to external websites.</li>
+                                    <li><span class="font-medium">Relative URLs:</span> These are used to link to other pages within the same website. They specify the path from the current page to the target page, such as <span class="bg-yellow-200 text-yellow-800 p-1 rounded-md font-bold">`about.html` or `../images/photo.jpg`</span>.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Linking to Sections of a Page</p>
+                                <p>You can also use links to jump to specific sections within the same web page. This is done by assigning an `id` to the target element and then linking to that `id` using a `#` symbol in the `href` attribute. For example: `&lt;a href="#section-2"&gt;Go to Section 2&lt;/a&gt;`.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Email and Phone Links</p>
+                                <p>Links can also be used to open a user's email client or initiate a phone call. For an email link, the `href` is set to `mailto:`, and for a phone link, it's `tel:`.
+                                </p>
+                            </div>     
+                <!-- Example -->
+                <div class="bg-gray-100 p-6 rounded-lg my-8">
+                    <h4 class="text-lg font-bold mb-2">Example:</h4>
+                    <p class="text-gray-700 mb-4">
+                        Here is an example of a simple link to a website and a link that opens an email.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Link to an external website --&gt;
+&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+
+&lt;!-- Email link --&gt;
+&lt;a href="mailto:test@example.com?subject=Hello%20there!"&gt;Send us an email&lt;/a&gt;</code></pre>
+                </div>
+
+                <!-- Practice Problem for Links -->
+                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-2xl"></span> Practice Problem
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Your task is to create two links.
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        First, create a link to Google.com with the text "Visit Google." Then, create a link that opens your email client with the subject "Hello!" when clicked.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Images -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-5" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    Chapter 5: Images
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    This chapter would likely explain how to embed images into a web page using HTML. Images are crucial for making web pages visually appealing and informative.
+                </p>
+
+                <!-- Key Concepts -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Concepts
+                    </h3>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `&lt;img&gt;` Tag</p>
+                                <p>The primary element for inserting an image is the `&lt;img&gt;` tag. Unlike the `&lt;a&gt;` and other tags, this is a self-closing tag, meaning it doesn't have a separate closing tag.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;img src="path/to/image.jpg" alt="Description of image"&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `src` Attribute</p>
+                                <p>This attribute is essential and stands for "source." It specifies the path to the image file you want to display. This can be either a relative or absolute URL.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `alt` Attribute</p>
+                                <p>This is a very important attribute for accessibility. The `alt` (alternative text) attribute provides a text description of the image. This text is displayed if the image fails to load or if a user is using a screen reader. It's crucial for users with visual impairments and for search engines that can't "see" the image.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Height and Width</p>
+                                <p>The `height` and `width` attributes can be used to set the dimensions of the image. While it's generally better to control image dimensions using CSS, these attributes can be used directly in the HTML tag to reserve the space for the image, preventing the page from shifting as it loads.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;img src="image.jpg" alt="A beautiful landscape" width="500" height="300"&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Image Formats</p>
+                                <ul class="list-disc list-inside space-y-2 mt-2">
+                                    <li><span class="font-medium">JPEG:</span> Best for photographs and images with lots of colors.</li>
+                                    <li><span class="font-medium">PNG:</span> Best for images that require transparency or have sharp lines, like logos and icons.</li>
+                                    <li><span class="font-medium">GIF:</span> Best for simple animations or images with a limited color palette.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Example -->
+                <div class="bg-gray-100 p-6 rounded-lg my-8">
+                    <h4 class="text-lg font-bold mb-2">Example:</h4>
+                    <p class="text-gray-700 mb-4">
+                        Here is an example of an image with `alt` text and specified dimensions.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Image Example --&gt;
+&lt;img src="https://placehold.co/400x200/5C7AEA/FFFFFF?text=Web+Concepts" alt="A placeholder image for a web concepts lesson" width="400"&gt;</code></pre>
+                </div>
+
+                <!-- Practice Problem -->
+                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-2xl"></span> Practice Problem
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Your task is to add a photo to a simple web page. Using the `&lt;img&gt;` tag, embed the following image URL into your document: `https://placehold.co/600x400/FF5733/FFFFFF?text=HTML+Image`.
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Be sure to include a descriptive `alt` attribute for accessibility. Finally, set the width of the image to 300 pixels to see how the `width` attribute can be used.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slide 6: Tables -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-6" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    Chapter 6: Tables
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    This chapter would likely explain how to create and structure tables in HTML to display tabular data. While tables were once used for page layout, their modern purpose is strictly for presenting data in a structured way, like a spreadsheet.
+                </p>
+
+                <!-- Key Concepts -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Concepts
+                    </h3>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `&lt;table&gt;` Tag</p>
+                                <p>This is the main container for the entire table.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;table&gt;...&lt;/table&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Table Rows (`&lt;tr&gt;`)</p>
+                                <p>Each row in the table is created using the `&lt;tr&gt;` (table row) tag.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;tr&gt;...&lt;/tr&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Table Data (`&lt;td&gt;`)</p>
+                                <p>This tag creates a cell within a table row and contains the actual data.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;td&gt;...&lt;/td&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Table Headers (`&lt;th&gt;`)</p>
+                                <p>These are used for the heading cells of a table, often displayed in bold and centered by default. They are used to describe the data in a column or row.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;th&gt;...&lt;/th&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Table Structure (`&lt;thead&gt;`, `&lt;tbody&gt;`, `&lt;tfoot&gt;`)</p>
+                                <p>These tags are used to organize the table's content into a header, body, and footer. This is important for accessibility and for styling purposes.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">`colspan` and `rowspan`</p>
+                                <p>These attributes are used to create cells that span across multiple columns (`colspan`) or multiple rows (`rowspan`). This is useful for creating more complex table layouts.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Example -->
+                <div class="bg-gray-100 p-6 rounded-lg my-8">
+                    <h4 class="text-lg font-bold mb-2">Example:</h4>
+                    <p class="text-gray-700 mb-4">
+                        Here is an example of a simple table with a header row and two data rows.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Simple Table Example --&gt;
+&lt;table class="w-full text-left"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th class="p-2 border-b-2"&gt;Name&lt;/th&gt;
+      &lt;th class="p-2 border-b-2"&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td class="p-2"&gt;Alice&lt;/td&gt;
+      &lt;td class="p-2"&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="p-2"&gt;Bob&lt;/td&gt;
+      &lt;td class="p-2"&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+                
+                <!-- Practice Problem -->
+                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-2xl"></span> Practice Problem
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Your task is to create a simple weekly schedule using an HTML table.
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Create a table with two columns: one for "Day of the Week" and one for "Activity." Use the `&lt;th&gt;` tag for your column headers. Then, add three rows of data for Monday, Tuesday, and Wednesday, using the `&lt;td&gt;` tag for the content.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slide 7: Forms -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-7" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    Chapter 7: Forms
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    This chapter would likely explain how to create **forms** in HTML to collect user input. Forms are a critical part of many websites, enabling everything from logging in and searching to submitting feedback and making purchases.
+                </p>
+
+                <!-- Key Concepts -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Concepts
+                    </h3>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `&lt;form&gt;` Tag</p>
+                                <p>This is the main container for all form elements. The `&lt;form&gt;` tag has important attributes like `action`, which specifies where to send the data, and `method`, which determines how to send it (usually `GET` or `POST`).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Input Elements (`&lt;input&gt;`)</p>
+                                <p>The `&lt;input&gt;` tag is the most common form element. It's a self-closing tag with a `type` attribute that defines what kind of input it is. Common types include `text` for a single-line text field, `password` for a text field where the characters are hidden, `email` for an email address field, `radio` for a single selection from a group of options, `checkbox` for multiple selections, and `submit` for a button that sends the form data.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `&lt;label&gt;` Tag</p>
+                                <p>The `&lt;label&gt;` tag is used to associate a text label with a form input. This is crucial for accessibility, as clicking the label will focus the input field, and screen readers can read the label aloud.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Other Form Elements</p>
+                                <ul class="list-disc list-inside space-y-2 mt-2">
+                                    <li><span class="font-medium">`&lt;textarea&gt;`</span>: Used for multi-line text input, such as comments or messages.</li>
+                                    <li><span class="font-medium">`&lt;select&gt;` and `&lt;option&gt;`</span>: Used to create a dropdown menu with a list of options.</li>
+                                    <li><span class="font-medium">`&lt;button&gt;`</span>: A versatile element used to create a clickable button.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Example -->
+                <div class="bg-gray-100 p-6 rounded-lg my-8">
+                    <h4 class="text-lg font-bold mb-2">Example:</h4>
+                    <p class="text-gray-700 mb-4">
+                        Here is a simple login form with a username and password field.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Simple Login Form --&gt;
+&lt;form action="/login" method="post"&gt;
+  &lt;div&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" required&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" required&gt;
+  &lt;/div&gt;
+  &lt;button type="submit"&gt;Log In&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+                
+                <!-- Practice Problem -->
+                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-2xl"></span> Practice Problem
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Your task is to create a simple login form.
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Inside a `&lt;form&gt;` tag, add two text inputs: one with the `type` "text" for a username and one with the `type` "password". Add a corresponding `&lt;label&gt;` for each input. Finally, add a submit button to the form.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Extra Markup -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-8" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    Chapter 8: Extra Markup
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    This chapter covers a variety of less common but still useful HTML tags that provide more specific meaning (or **semantics**) to your content. These tags help give additional context to text that goes beyond a simple paragraph or heading, which can be beneficial for accessibility, search engine optimization (SEO), and overall code clarity.
+                </p>
+
+                <!-- Key Concepts -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Concepts
+                    </h3>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Blockquote (`&lt;blockquote&gt;`) and Quote (`&lt;q&gt;`) tags</p>
+                                <p>These tags are used for quotations. **`&lt;blockquote&gt;`** is for longer quotes that are displayed as a separate block of text, while **`&lt;q&gt;`** is for shorter, inline quotes. Using these tags properly distinguishes quoted material from your own writing. You can also use the `&lt;cite&gt;` tag within a blockquote to provide the source of the quote.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;blockquote&gt;
+  &lt;p&gt;The future belongs to those who believe in the beauty of their dreams.&lt;/p&gt;
+  &lt;cite&gt;- Eleanor Roosevelt&lt;/cite&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As my teacher often said, &lt;q&gt;Never give up on your passion.&lt;/q&gt;&lt;/p&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Abbreviations and Acronyms (`&lt;abbr&gt;`) tag</p>
+                                <p>The `&lt;abbr&gt;` tag is used to specify an abbreviation or acronym. You can provide the full text of the abbreviation in a `title` attribute, which appears as a tooltip when a user hovers over the abbreviated text.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;p&gt;I'm learning &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; for web development.&lt;/p&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Code (`&lt;code&gt;`) tag</p>
+                                <p>This tag is used to display a short piece of computer code. Browsers typically render the text in a monospaced font to make it distinct from the rest of the text.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;p&gt;The &lt;code&gt; &lt;/code&gt; tag is a good choice for showing inline code.&lt;/p&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Superscript (`&lt;sup&gt;`) and Subscript (`&lt;sub&gt;`) tags</p>
+                                <p>These tags are used to display text as superscript or subscript, respectively. They are useful for things like mathematical formulas (e.g., x�) or chemical formulas (e.g., HO).</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;p&gt;The formula for water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;
+&lt;p&gt;A common equation is E = mc&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Definitions (`&lt;dfn&gt;`) tag</p>
+                                <p>The `&lt;dfn&gt;` tag is used to indicate the defining instance of a term. This helps clarify the meaning of a word or phrase within a paragraph.</p>
+                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;p&gt;A &lt;dfn&gt;web server&lt;/dfn&gt; is a computer that stores web content and responds to requests from web browsers.&lt;/p&gt;</code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Example -->
+                <div class="bg-gray-100 p-6 rounded-lg my-8">
+                    <h4 class="text-lg font-bold mb-2">Example:</h4>
+                    <p class="text-gray-700 mb-4">
+                        Here is a combined example showing how you can use multiple extra markup tags in a single paragraph to provide more context.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Combined Example --&gt;
+&lt;p&gt;
+  The formula for sulfuric acid is H&lt;sub&gt;2&lt;/sub&gt;SO&lt;sub&gt;4&lt;/sub&gt;, which is very different from water (H&lt;sub&gt;2&lt;/sub&gt;O). 
+  A common phrase attributed to Albert Einstein is, &lt;q&gt;Imagination is more important than knowledge.&lt;/q&gt;
+&lt;/p&gt;</code></pre>
+                </div>
+                
+                <!-- Practice Problem -->
+                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-2xl"></span> Practice Problem
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Your task is to create a small HTML snippet that uses at least two of the tags you just learned.
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        First, write a short paragraph that includes the abbreviation **`CSS`** with a `title` attribute for its full name. Then, add a quote from a book or famous person using the **`&lt;blockquote&gt;`** tag.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Flash, Video & Audio -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-9" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    Chapter 9: Flash, Video & Audio
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    This chapter explains how to embed multimedia content like video and audio into a web page. While Flash is now obsolete, the principles for embedding video and audio are fundamental to modern web design.
+                </p>
+
+                <!-- Key Concepts -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Concepts
+                    </h3>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `&lt;video&gt;` and `&lt;audio&gt;` Tags</p>
+                                <p>These are the modern way to embed video and audio files directly into a web page without relying on third-party plugins. They are supported by all major browsers.</p>
+                                <ul class="list-disc list-inside space-y-2 mt-2">
+                                    <li><span class="font-medium">`&lt;video&gt;`</span>: Used to embed a video player. Important attributes include `src`, `controls`, `width`, and `height`.</li>
+                                    <li><span class="font-medium">`&lt;audio&gt;`</span>: Used to embed an audio player. Similar to video, it uses the `src` and `controls` attributes.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">The `&lt;source&gt;` Element</p>
+                                <p>Since different browsers support different video and audio formats, the `&lt;source&gt;` element is used inside the `&lt;video&gt;` or `&lt;audio&gt;` tags to specify multiple file formats. The browser will then play the first format it can support.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Accessibility</p>
+                                <p>It's important to provide alternative content for users who cannot access the multimedia. You can place text within the `&lt;video&gt;` or `&lt;audio&gt;` tags that will be displayed if the browser does not support the element.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Controlling Playback with JavaScript</p>
+                                <p>You can create a custom UI and control the media programmatically using JavaScript. Common methods include `play()`, `pause()`, and properties like `currentTime` and `volume`.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Example -->
+                <div class="bg-gray-100 p-6 rounded-lg my-8">
+                    <h4 class="text-lg font-bold mb-2">Example:</h4>
+                    <p class="text-gray-700 mb-4">
+                        Here is a simple example showing how to embed a video and an audio file.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Video Example --&gt;
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;!-- Audio Example --&gt;
+&lt;audio controls&gt;
+  &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio tag.
+&lt;/audio&gt;</code></pre>
+                </div>
+                
+                <!-- Practice Problem -->
+                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-2xl"></span> Practice Problem
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Your task is to embed both a video and an audio file into your web page.
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        First, add a video player using the `&lt;video&gt;` tag. Use a dummy URL for the source (e.g., `https://example.com/video.mp4`) and include the `controls` attribute. Second, add an audio player using the `&lt;audio&gt;` tag. Use a dummy URL for the source (e.g., `https://example.com/audio.mp3`) and include the `controls` attribute. Remember to include a `&lt;source&gt;` tag with a different dummy format for each to demonstrate how to provide multiple file options.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: HTML5 Structure -->
+        <section class="my-8 lg:my-16">
+            <div class="content-card">
+                <h2 id="chapter-10" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                    Chapter 10: HTML5 Structure
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    This chapter introduces the new structural elements that were added in HTML5. The goal of these new tags is to provide more **semantic meaning** to the layout of a web page, replacing generic `<div>` tags. This makes the code easier to read for both developers and search engines.
+                </p>
+        
+                <!-- Key Concepts -->
+                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl"></span> Key Concepts
+                    </h3>
+                    <ul class="list-none space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Header (`&lt;header&gt;`)</p>
+                                <p>Used for the introductory content of a page or a section, often containing the site logo, a main heading, or navigation links.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Navigation (`&lt;nav&gt;`)</p>
+                                <p>Specifically for a block of navigation links. It's a key tool for accessibility, as screen readers can use it to easily find the main navigation.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Section (`&lt;section&gt;`)</p>
+                                <p>A generic sectioning element for grouping related content, such as a chapter, a set of articles, or a part of a page. It should always have a heading to describe its content.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Article (`&lt;article&gt;`)</p>
+                                <p>Represents a self-contained piece of content that could be distributed independently, like a blog post, a news story, or a forum post. It should make sense on its own.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Aside (`&lt;aside&gt;`)</p>
+                                <p>For content that is tangentially related to the main content, such as a sidebar, a block of related links, or a callout box. It can be separated from the main content without losing meaning.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl text-blue-500 mr-3"></span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Footer (`&lt;footer&gt;`)</p>
+                                <p>Used for the footer of a document or a section. It typically contains information like copyright notices, contact details, or links to related documents.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Example -->
+                <div class="bg-gray-100 p-6 rounded-lg my-8">
+                    <h4 class="text-lg font-bold mb-2">Example:</h4>
+                    <p class="text-gray-700 mb-4">
+                        Here is how these semantic tags work together to create a simple, well-structured page layout.
+                    </p>
+                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;body&gt;
+  &lt;!-- Page Header --&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Awesome Website&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;a href="/"&gt;Home&lt;/a&gt;
+      &lt;a href="/blog"&gt;Blog&lt;/a&gt;
+      &lt;a href="/contact"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;!-- Main Content --&gt;
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Latest Articles&lt;/h2&gt;
+      &lt;article&gt;
+        &lt;h3&gt;First Blog Post&lt;/h3&gt;
+        &lt;p&gt;This is a self-contained blog post about...&lt;/p&gt;
+      &lt;/article&gt;
+      &lt;article&gt;
+        &lt;h3&gt;Second Blog Post&lt;/h3&gt;
+        &lt;p&gt;This is another post about a different topic.&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+    
+    &lt;!-- Sidebar --&gt;
+    &lt;aside&gt;
+      &lt;h3&gt;Related Links&lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;!-- Page Footer --&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2023 My Awesome Website. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+                </div>
+                
+                <!-- Practice Problem -->
+                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-2xl"></span> Practice Problem
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Your task is to create a simple page structure for a news website using HTML5 semantic tags.
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Create a `&lt;header&gt;` with the website title. Use a `&lt;main&gt;` tag for the page's primary content. Inside the `&lt;main&gt;`, add a `&lt;section&gt;` with a heading "Featured News." Inside this section, add two separate `&lt;article&gt;` tags, each with a heading and a short paragraph of dummy text. Finally, add a `&lt;footer&gt;` at the bottom of the page with a copyright notice.
+                    </p>
+                </div>
+            </div>
+        </section>
+                <a href="css lesson .html" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition-colors duration-200">
+                            <span class="font-semibold text-blue-600">Go to part two</span> CSS-Cascadade stylesheet 
+                        </a>
+    </main>
+</body>
+</html>
+                
+   
