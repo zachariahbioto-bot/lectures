@@ -265,89 +265,123 @@
                 </div>
             </div>
         </section>
+        section class="my-8 lg:my-16 container mx-auto px-4">
+        <div class="content-card">
+            <h2 id="chapter-4" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
+                Chapter 4: Links
+            </h2>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                This chapter would likely cover how to create links between web pages using HTML. Links, or hyperlinks, are the fundamental building blocks of the web, allowing users to navigate from one page to another.
+            </p>
 
-        <!-- Slide 4: Links -->
-        <section class="my-8 lg:my-16">
-            <div class="content-card">
-                <h2 id="chapter-4" class="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-blue-500 pb-4 mb-6">
-                    Chapter 4: Links
-                </h2>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                    This chapter would likely cover how to create links between web pages using HTML. Links, or hyperlinks, are the fundamental building blocks of the web, allowing users to navigate from one page to another.
+            <!-- Key Concepts -->
+            <div class="bg-blue-50 rounded-2xl p-6 mb-8">
+                <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                    <span class="mr-3 text-3xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </span> Key Concepts
+                </h3>
+                <ul class="list-none space-y-4 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-xl text-blue-500 mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-semibold text-gray-900">The `&lt;a&gt;` Tag</p>
+                            <p>The primary element for creating a link is the `&lt;a&gt;` (anchor) tag. The content within this tag becomes the clickable text or image.</p>
+                            <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code></pre>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl text-blue-500 mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-semibold text-gray-900">The `href` Attribute</p>
+                            <p>This is the most important attribute of the `&lt;a&gt;` tag. The `href` (Hypertext Reference) attribute specifies the destination URL or file path that the link will point to.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl text-blue-500 mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-semibold text-gray-900">Absolute vs. Relative URLs</p>
+                            <ul class="list-disc list-inside space-y-2 mt-2">
+                                <li><span class="font-medium">Absolute URLs:</span> These are full web addresses, including the protocol and domain name, such as `https://www.example.com/page.html`. You use them to link to external websites.</li>
+                                <li><span class="font-medium">Relative URLs:</span> These are used to link to other pages within the same website. They specify the path from the current page to the target page, such as <span class="bg-yellow-200 text-yellow-800 p-1 rounded-md font-bold">`about.html` or `../images/photo.jpg`</span>.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl text-blue-500 mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-semibold text-gray-900">Linking to Sections of a Page</p>
+                            <p>You can also use links to jump to specific sections within the same web page. This is done by assigning an `id` to the target element and then linking to that `id` using a `#` symbol in the `href` attribute. For example: `&lt;a href="#section-2"&gt;Go to Section 2&lt;/a&gt;`.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl text-blue-500 mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-semibold text-gray-900">Email and Phone Links</p>
+                            <p>Links can also be used to open a user's email client or initiate a phone call. For an email link, the `href` is set to `mailto:`, and for a phone link, it's `tel:`.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Example -->
+            <div class="bg-gray-100 p-6 rounded-lg my-8">
+                <h4 class="text-lg font-bold mb-2">Example:</h4>
+                <p class="text-gray-700 mb-4">
+                    Here is an example of a simple link to a website and a link that opens an email.
                 </p>
-
-                <!-- Key Concepts -->
-                <div class="bg-blue-50 rounded-2xl p-6 mb-8">
-                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 flex items-center">
-                        <span class="mr-3 text-3xl"></span> Key Concepts
-                    </h3>
-                    <ul class="list-none space-y-4 text-gray-700">
-                        <li class="flex items-start">
-                            <span class="text-xl text-blue-500 mr-3"></span>
-                            <div>
-                                <p class="font-semibold text-gray-900">The `&lt;a&gt;` Tag</p>
-                                <p>The primary element for creating a link is the `&lt;a&gt;` (anchor) tag. The content within this tag becomes the clickable text or image.</p>
-                                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto max-w-full mt-2"><code class="text-sm">&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code></pre>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-xl text-blue-500 mr-3"></span>
-                            <div>
-                                <p class="font-semibold text-gray-900">The `href` Attribute</p>
-                                <p>This is the most important attribute of the `&lt;a&gt;` tag. The `href` (Hypertext Reference) attribute specifies the destination URL or file path that the link will point to.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-xl text-blue-500 mr-3"></span>
-                            <div>
-                                <p class="font-semibold text-gray-900">Absolute vs. Relative URLs</p>
-                                <ul class="list-disc list-inside space-y-2 mt-2">
-                                    <li><span class="font-medium">Absolute URLs:</span> These are full web addresses, including the protocol and domain name, such as `https://www.example.com/page.html`. You use them to link to external websites.</li>
-                                    <li><span class="font-medium">Relative URLs:</span> These are used to link to other pages within the same website. They specify the path from the current page to the target page, such as <span class="bg-yellow-200 text-yellow-800 p-1 rounded-md font-bold">`about.html` or `../images/photo.jpg`</span>.</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-xl text-blue-500 mr-3"></span>
-                            <div>
-                                <p class="font-semibold text-gray-900">Linking to Sections of a Page</p>
-                                <p>You can also use links to jump to specific sections within the same web page. This is done by assigning an `id` to the target element and then linking to that `id` using a `#` symbol in the `href` attribute. For example: `&lt;a href="#section-2"&gt;Go to Section 2&lt;/a&gt;`.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-xl text-blue-500 mr-3"></span>
-                            <div>
-                                <p class="font-semibold text-gray-900">Email and Phone Links</p>
-                                <p>Links can also be used to open a user's email client or initiate a phone call. For an email link, the `href` is set to `mailto:`, and for a phone link, it's `tel:`.
-                                </p>
-                            </div>     
-                <!-- Example -->
-                <div class="bg-gray-100 p-6 rounded-lg my-8">
-                    <h4 class="text-lg font-bold mb-2">Example:</h4>
-                    <p class="text-gray-700 mb-4">
-                        Here is an example of a simple link to a website and a link that opens an email.
-                    </p>
-                    <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Link to an external website --&gt;
+                <pre class="bg-gray-900 text-lime-400 p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Link to an external website --&gt;
 &lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
 
 &lt;!-- Email link --&gt;
 &lt;a href="mailto:test@example.com?subject=Hello%20there!"&gt;Send us an email&lt;/a&gt;</code></pre>
-                </div>
-
-                <!-- Practice Problem for Links -->
-                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                        <span class="mr-3 text-2xl"></span> Practice Problem
-                    </h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Your task is to create two links.
-                    </p>
-                    <p class="mt-4 text-gray-700 leading-relaxed">
-                        First, create a link to Google.com with the text "Visit Google." Then, create a link that opens your email client with the subject "Hello!" when clicked.
-                    </p>
-                </div>
             </div>
-        </section>
+
+            <!-- Practice Problem for Links -->
+            <div class="bg-gray-100 border-l-4 border-gray-400 rounded-lg p-6 my-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <span class="mr-3 text-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </span> Practice Problem
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Your task is to create two links.
+                </p>
+                <p class="mt-4 text-gray-700 leading-relaxed">
+                    First, create a link to Google.com with the text "Visit Google." Then, create a link that opens your email client with the subject "Hello!" when clicked.
+                </p>
+            </div>
+        </div>
+    </section>
+
+        
+        
+                
 
         <!-- Slide 5: Images -->
         <section class="my-8 lg:my-16">
@@ -934,4 +968,5 @@
 </body>
 </html>
                 
+
    
